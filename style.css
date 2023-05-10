@@ -1,3 +1,6 @@
+*{
+  border-sizing:border-box;
+}
 @keyframes navbar-brand {
    0% {
       opacity: 0;
@@ -108,7 +111,6 @@ body {
   color: white;
   background-color: inherit;
   font-family: inherit;
-  padding: 0 0 0 0;
 }
 
 .navbar a:hover, .dropdown:hover .dropbtn {
@@ -122,7 +124,7 @@ body {
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
-  margin:3.3em 0 0 0;
+  margin:5em 0 0 0;
 }
 
 .dropdown-content a {
@@ -208,6 +210,10 @@ section {
  grid-area: audio2;
  padding: 0 0 0 5%;
 }
+video, audio {
+  max-width:100%;
+  justify-self:center;
+}
 .video1 {
   height:auto;
   max-width:400px;
@@ -255,7 +261,7 @@ figure{
   padding:0;
 }
 .fig1{
-  padding:0;
+  justify-self:center
 }
 .homed {
   grid-area:homed;
@@ -273,7 +279,11 @@ figure{
   text-align:center;
   padding:0;
   width:auto;
+  align-self:center;
+  justify-self:middle;
+  max-width:100%;
 }
+
 .figp{
   text-align:center;
   margin:50px 0 0 0;
@@ -302,13 +312,6 @@ figure{
 }
 .mystoryp{
   margin:10px 100px 40px 0;
-}
-.nestedgrid2{
-display:grid;
-grid-template-columns:100%;
-grid-template-areas:
-"div1"
-"div2";
 }
 .div1p{
   color:black;
@@ -397,7 +400,7 @@ grid-template-areas:
   margin:100px 0 0 0;
 }
 .resb{
-  padding:;
+  padding:0;
 }
 
 
@@ -410,18 +413,89 @@ grid-template-areas:
     "header"
     "nav"
     "main"
+    "section"
     "video1"
     "video2"
     "audio1"
     "audio2"
+    "homed"
+    "djpic1"
+    "homee"
+    "djpic2"
+    "homef"
+    "djpic3"
     "footer";
     }
+    .nestedgrid2{
+display:grid;
+grid-template-columns:100%;
+grid-template-areas:
+    "header"
+    "nav"
+    "main"
+    "section"
+    "video1"
+    "video2"
+    "audio1"
+    "audio2"
+    "homed"
+    "djpic1"
+    "homee"
+    "djpic2"
+    "homef"
+    "djpic3"
+    "footer";
+}
+
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  margin:1.8em 0 0 0;
+}
+.fig1{
+  justify-self:center
+}
+.audio1 {
+ max-width: 100%;
+ grid-area: audio1;
+ padding: 0 0 0 5%;
+}
+.audio2 {
+ max-width: 100%;
+ grid-area: audio2;
+ padding: 0 0 0 5%;
+}
+.video1 {
+  height:auto;
+  max-width:400px;
+  grid-area: video1;
+  padding:0 0 0 5%;
+
+}
+.video2 {
+  height:auto;
+  max-width:400px;
+  grid-area: video2;
+  padding:0 0 0 5%;
+
+}
+
+.video, .audio {
+    margin:0px;
+    display: grid;
+    justify-content:space-around;
+    padding:0px;
+}
   .djpic1{
   max-width:100%;
   height:20vw;
   margin:auto;
   text-align: center;
-  padding:0 0 0 34.5%;
   grid-area:djpic1;
 }
 
@@ -430,7 +504,6 @@ grid-template-areas:
   height:20vw;
   margin:auto;
   text-align: center;
-  padding:0 0 0 34.5%;
   grid-area:djpic2;
 }
 
@@ -440,7 +513,6 @@ grid-template-areas:
   margin:auto;
   margin-bottom:3vw;
   text-align: center;
-  padding:0 0 0 34.5%;
   grid-area:djpic3;
 }
   
@@ -455,14 +527,27 @@ grid-template-areas:
     "nav main"
     "footer footer";
     }
+    
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  margin:2em 0 0 0;
+}
 .navbar a {
   font-size: .9em;
   padding: .6em;
 }
 
 .dropdown .dropbtn {
-  font-size: .9em;
-  padding: .6em;
+  font-size: 0.95em;
+  margin: 0.1em;
+}
+.fig1{
+  justify-self:center
 }
 main {
     grid-area:main;
@@ -491,50 +576,84 @@ main p {
     padding:1% 2%;
     font-size:1.2em;
 }
-.djpic1{
-  max-width:100%;
-  height:20vw;
-  margin:auto;
-  padding:0 0 0 34.5%;
-  grid-area:djpic1;
+.audio1 {
+ max-width: 100%;
+ grid-area: audio1;
+ padding: 0 0 0 5%;
+}
+.audio2 {
+ max-width: 100%;
+ grid-area: audio2;
+ padding: 0 0 0 5%;
+}
+.video1 {
+  height:auto;
+  max-width:400px;
+  grid-area: video1;
+  padding:0 0 0 5%;
+
+}
+.video2 {
+  height:auto;
+  max-width:400px;
+  grid-area: video2;
+  padding:0 0 0 5%;
+
 }
 
-.djpic2{
-  max-width:100%;
-  height:20vw;
-  margin:auto;
-  padding:0 0 0 34.5%;
-  grid-area:djpic2;
+.video, .audio {
+    margin:0px;
+    display: grid;
+    justify-content:space-around;
+    padding:0px;
+
+}
+.homed {
+  grid-area:homed;
+  text-align:center;
+}
+.homee {
+  grid-area:homee;
+  text-align:center;
+}
+.homef {
+  grid-area:homef;
+  text-align:center;
 }
 
-.djpic3{
-  max-width:100%;
-  height:25vw;
-  margin:auto;
-  margin-bottom:3vw;
-  padding:0 0 0 34.5%;
-  grid-area:djpic3;
-}
 .nestedgrid2{
 display:grid;
 grid-template-columns:100%;
 grid-template-areas:
-"div1"
-"div2";
+    "header"
+    "nav"
+    "main"
+    "section"
+    "video1"
+    "video2"
+    "audio1"
+    "audio2"
+    "homed"
+    "djpic1"
+    "homee"
+    "djpic2"
+    "homef"
+    "djpic3"
+    "footer";
 }
-
+}
 
 /*-----------------------Desktop Media Query------------------------*/
 @media only screen and (min-width: 960px)  {
 
 .container{
   display:grid;
+  grid-template-columns:1fr;
   grid-template-areas:
-  "header header"
-  "nav nav"
-  "main video"
-  "main audio"
-  "footer footer"
+  "header"
+  "nav"
+  "main"
+  "footer"
 }
 .nestedgrid1{
     display:grid;
@@ -544,13 +663,13 @@ grid-template-areas:
 }
 .nestedgrid2{
 display:grid;
-align-items:start;
+
 grid-template-columns:1fr 1fr;
 grid-template-areas:
 "section video1"
 "section video2"
-"audio1 audio1"
-"audio2 audio2"
+"section audio1"
+"section audio2"
 "homed homee"
 "djpic1 djpic2"
 "homef homef"
@@ -565,33 +684,7 @@ grid-template-areas:
   font-size: 1em;
   padding: 0;
 }
-main {
-    grid-area:main;
-    background:#FFFFFF;
-    color:#000000;
-    margin:15px 0px 15px 0px;
-    }
 
-main h2 {
-    text-align:center;
-    margin:1%;
-    color:#000000;
-    padding:1.5%;
-    font-size:1.8em;
-}
-main h3{
-  text-align:center;
-  margin:0;
-  color:#000000;
-  padding:1.5%;
-  font-size: 1.5em;
-}
-
-main p {
-    color:#333;
-    padding:1% 2% 0 5%;
-    font-size:1.2em;
-}
 .djpic1{
   max-width:100%;
   height:20vw;
@@ -635,4 +728,5 @@ main p {
   grid-template-columns:1fr 1fr 1fr;
   grid-template-areas:
   "ngpicc ngpicd ngpice";
+ }
 }
